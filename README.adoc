@@ -1,1 +1,7 @@
-# judo-misc-p2
+# Eclipse P2 Site of JUDO misc dependencies
+
+Aggregated site of JUDO misc dependencies
+
+To use it download the compressed version from central or use the zipped version directly:
+
+http://repo1.maven.org/maven2/hu/blackbelt/eclipse/judo-misc-p2/${VERSION}/judo-misc-p2-${VERSION}-site.zip!/

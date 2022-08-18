@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<site>
+   <description>
+      To install these features, point Eclipse at this site.
+   </description>
+   <feature id="apache.commons.text.feature">
+      <category name="judo_misc"/>
+   </feature>
+   <category-def name="judo_misc" label="Judo Misc">
+      <description>
+         Judo Misc Utils.
+      </description>
+   </category-def>
+
+   <feature id="apache.commons.text.feature.source">
+      <category name="judo_misc_source"/>
+   </feature>
+   <category-def name="judo_misc_source" label="Judo Misc Source">
+      <description>
+         Judo Misc utils source code.
+      </description>
+   </category-def>
+</site>
