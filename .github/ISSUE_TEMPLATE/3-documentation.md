@@ -15,7 +15,7 @@ labels: "type: docs"
 
 <!--
   If your issue is not regarding the documentation, please choose an issue type:
-  https://github.com/BlackBeltTechnology/judo-jsl-vscode/issues/new/choose
+  https://github.com/BlackBeltTechnology/judo-misc-p2/issues/new/choose
 -->
 
 ### Is there a specific documentation page you are reporting?
