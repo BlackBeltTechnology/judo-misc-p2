@@ -1,0 +1,39 @@
+# Judo Misc P2 Site
+
+> An Eclipse P2 update site that repackages Maven Central artifacts as OSGi bundles, allowing Eclipse-based JUDO tooling to consume third-party libraries through the standard update-site mechanism.
+
+Key facts:
+- Java 17, Maven 3.9.4 (via `./mvnw` wrapper), POM-only packaging (no Java source code)
+- Uses p2-maven-plugin 2.0.0 to convert Maven artifacts into OSGi bundles and generate P2 repository metadata
+- Currently bundles Apache Commons Text 1.9 (with transitive dependencies) as a P2 feature
+- Output is a distributable ZIP containing a self-contained P2 repository
+- Part of the [judo-community](https://github.com/BlackBeltTechnology/judo-community) aggregator ecosystem
+- License: Eclipse Public License 2.0 (EPL-2.0)
+
+## Docs
+
+- [README.md](README.md): Project overview, build commands, usage instructions, and architecture diagrams
+- [AGENTS.md](AGENTS.md): Developer guide with directory structure, build commands, Maven profiles, and how to add dependencies
+- [CONTRIBUTING.md](CONTRIBUTING.md): Contribution guidelines
+- [CHANGELOG.md](CHANGELOG.md): Release history
+
+## Build Inputs
+
+- [pom.xml](pom.xml): Main build file — artifact declarations, feature definitions, plugin configuration, and deployment profiles
+- [category.xml](category.xml): P2 category definitions mapping features to categories displayed in Eclipse
+- [src/assembly/assembly.xml](src/assembly/assembly.xml): Maven assembly descriptor packaging the P2 repository directory into a ZIP
+
+## CI/CD
+
+- [.github/CIFLOW.md](.github/CIFLOW.md): CI/CD workflow documentation and branching strategy (GitFlow)
+- [.github/workflows/build.yml](.github/workflows/build.yml): Main CI pipeline — builds, deploys, tags, and creates GitHub releases
+- [.github/workflows/release.yml](.github/workflows/release.yml): Manual release trigger — creates PRs to master and bumps develop version
+
+## Optional
+
+- [LICENSE.txt](LICENSE.txt): EPL-2.0 license text
+- [.github/workflows/build-dependabot.yml](.github/workflows/build-dependabot.yml): Dependabot PR build pipeline
+- [.github/workflows/bump-version.yml](.github/workflows/bump-version.yml): Version bump workflow
+- [.github/workflows/create-release-on-master.yml](.github/workflows/create-release-on-master.yml): Release creation on master merge
+- [.github/workflows/create-release-tagged.yml](.github/workflows/create-release-tagged.yml): Tagged release creation
+- [.github/workflows/merge-pr-tagged.yml](.github/workflows/merge-pr-tagged.yml): Tagged PR merge workflow
